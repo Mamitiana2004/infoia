@@ -1,0 +1,30 @@
+.loginBtn{
+  width: 100%;
+  background-color: #1e3a8a!important;
+  color: #f9fafb!important;
+  border: none!important;
+}
+
+.loginBtn:hover{
+  background-color: #082f49!important;
+  color: #5680c0!important;
+  border: none!important;
+}
+
+
+.form-container{
+  width: 100%!important;
+}
+
+
+.emailInput{
+  width: 100%;
+}
+
+.passwordInput{
+  width: 100%;
+}
+
+.signUp{
+  background-color: rgb(17,24,39 )!important;
+}
