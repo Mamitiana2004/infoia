@@ -1,0 +1,15 @@
+@font-face {
+    font-family: 'Poppins';
+    src: url('../fonts/Poppins-Regular.ttf') format('truetype');
+  }
+body{
+    font-family: 'Poppins'!important;
+}   
+.triangle {
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 20px 20px 0;
+    border-color: transparent #aaa transparent transparent;
+  }
+  

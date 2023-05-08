@@ -1,0 +1,12 @@
+.inputClasse{
+    width: 100%;
+}
+
+.imageBack{
+    background-image: url("../img/loading.gif");
+}
+
+.genre{
+    background-color: transparent!important;
+    color: #e5e7eb!important;
+}
