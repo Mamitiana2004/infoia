@@ -8,21 +8,16 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestHeader;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import org.springframework.web.multipart.MultipartFile;
 
 import com.google.gson.Gson;
 import com.project.model.Admin;
-import com.project.model.Article;
-import com.project.model.Token;
 import com.project.model.TokenAdmin;
 import com.project.responseHandler.Error;
 import com.project.service.AdminService;
-import com.project.service.Utilitaire;
-import com.project.util.Cryptage;
 
 @CrossOrigin
 @RestController
-@RequestMapping("/admin")
+@RequestMapping("/back")
 public class AdminController {
 
 	@GetMapping("/verifiSession")
@@ -54,13 +49,7 @@ public class AdminController {
 		}
 	}
 	
-	@PostMapping("/article")
-	public String article(String title,String description,MultipartFile photo,String datePub) throws Exception {
-		Gson gson=new Gson();
-		System.out.println("photo: "+photo.getOriginalFilename());
-		System.out.println("ito : "+Utilitaire.imageToBase64(photo.getOriginalFilename()));
-		return gson.toJson(true);
-	}
+	
 	
 	
 }
