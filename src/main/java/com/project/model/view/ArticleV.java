@@ -6,6 +6,7 @@ import java.util.Date;
 import com.project.database.annotation.Column;
 import com.project.database.annotation.Table;
 import com.project.database.object.Entity;
+import com.project.model.Article;
 
 @Table("v_article")
 public class ArticleV extends Entity{
@@ -18,6 +19,12 @@ public class ArticleV extends Entity{
 
 	@Column
 	String description;
+	
+	@Column
+	String content;
+	
+	@Column
+	String photo;
 	
 	@Column
 	Date datePub;
@@ -56,6 +63,16 @@ public class ArticleV extends Entity{
 	public void setDatePub(Date datePub) {
 		this.datePub = datePub;
 	}
+	
+	
+
+	public String getPhoto() {
+		return photo;
+	}
+
+	public void setPhoto(String photo) {
+		this.photo = photo;
+	}
 
 	public String getType() {
 		return type;
@@ -67,6 +84,15 @@ public class ArticleV extends Entity{
 	
 	
 	
+	
+	public String getContent() {
+		return content;
+	}
+
+	public void setContent(String content) {
+		this.content = content;
+	}
+
 	public ArrayList<ArticleV> getAllLimite(int limite) throws Exception{
 		int n=0;
 		ArrayList<ArticleV> value=new ArrayList<>();
@@ -92,6 +118,26 @@ public class ArticleV extends Entity{
 			n++;
 		}
 		return value;
+	}
+	
+	
+	
+	@Override
+	public String toString() {
+		return "ArticleV [id=" + id + ", title=" + title + ", description=" + description + ", content=" + content
+				+ ", datePub=" + datePub + ", type=" + type + "]";
+	}
+
+	@SuppressWarnings("unchecked")
+	public ArticleV getById(int id) throws Exception {
+		ArrayList<ArticleV> getArticles=getAll();
+		for (ArticleV article : getArticles) {
+			if(article.getId()==id) {
+				System.out.println(article);
+				return article;
+			}
+		}
+		return null;
 	}
 	
 }

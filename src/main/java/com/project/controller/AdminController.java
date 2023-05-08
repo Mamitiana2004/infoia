@@ -12,6 +12,7 @@ import org.springframework.web.multipart.MultipartFile;
 
 import com.google.gson.Gson;
 import com.project.model.Admin;
+import com.project.model.Article;
 import com.project.model.Token;
 import com.project.model.TokenAdmin;
 import com.project.responseHandler.Error;
@@ -60,5 +61,6 @@ public class AdminController {
 		System.out.println("ito : "+Utilitaire.imageToBase64(photo.getOriginalFilename()));
 		return gson.toJson(true);
 	}
+	
 	
 }
