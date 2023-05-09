@@ -35,12 +35,13 @@
 	        <version>7.2.0</version>
 	    </dependency>
 	
-	    <!-- Dépendance Firebase Cloud Messaging -->
-	    <dependency>
-	        <groupId>com.google.firebase</groupId>
-	        <artifactId>firebase-admin</artifactId>
-	        <version>7.2.0</version>
-	    </dependency>
+	   
+		<dependency>
+		    <groupId>org.springframework.boot</groupId>
+		    <artifactId>spring-boot-starter-tomcat</artifactId>
+		</dependency>
+		
+
 
 		<dependency>
 			<groupId>org.springframework.boot</groupId>

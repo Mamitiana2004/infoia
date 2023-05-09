@@ -83,7 +83,7 @@ public class ArticleController {
 		      String base64 = Base64.encodeBase64String(bytes);
 		      // Traitez le fichier ici
 		      System.out.println(domaine);
-		      Article a=new Article(title, domaine, description, content, dateN, base64);
+		      Article a=new Article(title, domaine, description.replace("'", " "), content.replace("'", " "), dateN, base64);
 		      a.save();
 		      return gson.toJson(true);
 		} 
